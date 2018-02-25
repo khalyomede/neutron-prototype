@@ -7,7 +7,7 @@ class Tableau extends Prototype {
   public $items;
 
   public function __construct($items = []) {
-    $this->items = $items;
+  $this->items = $items;
   }
 }
 ```
@@ -62,15 +62,15 @@ namespace Me;
 use Neutron\Prototype;
 
 class Tableau extends Prototype {
-	public $items
+  public $items
 
-	public function __construct($items = []) {
-		$this->items = $items;
-	}
+  public function __construct($items = []) {
+  $this->items = $items;
+  }
 
-	public function all() {
-		return $this->items;
-	}
+  public function all() {
+  return $this->items;
+  }
 }
 ```
 
@@ -84,7 +84,7 @@ $languages = ['php' => '7.2', 'python' => '3.6', 'nodejs' => '8.6'];
 $tableau = new Tableau($languages);
 
 $tableau->prototype('className', function() {
-	return 'Tableau';
+  return 'Tableau';
 });
 
 echo $tableau->className();
@@ -106,7 +106,7 @@ $languages = ['php' => '7.2', 'python' => '3.6', 'nodejs' => '8.6'];
 $tableau = new Tableau($languages);
 
 $tableau->prototype('first', function() {
-	return $this->items[key($this->items)];
+  return $this->items[key($this->items)];
 });
 
 $version = $tableau->first();
@@ -130,7 +130,7 @@ $languages = ['php' => '7.2', 'python' => '3.6', 'nodejs' => '8.6'];
 $tableau = new Tableau($languages);
 
 $tableau->prototype('find', function($key) {
-	return isset($this->items[$key]) ? $this->items[$key] : null;
+  return isset($this->items[$key]) ? $this->items[$key] : null;
 });
 
 $python_version = $tableau->find('python');
@@ -143,6 +143,31 @@ Will echo:
 ```bash
 3.6
 ```
+
+## Methods definition
+
+- [prototypes()](#prototypes)
+- [prototype()](#prototype)
+
+### Prototypes()
+
+List all the registered prototypes. The list is shared across all the instance of your prototyped object.
+
+```php
+public static function prototypes(): array
+```
+
+### Prototype()
+
+Register a new method for the object. This method can then be accessed across all your instances of the prototyped object.
+
+```php
+public function prototype(string $name, callable $function): Prototype
+```
+
+**Note**
+
+This function returns an instance of the current object.
 
 ## Licence MIT
 
