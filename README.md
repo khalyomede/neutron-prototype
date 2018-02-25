@@ -32,7 +32,7 @@ $languages = $tableau->all();
 - [Installation](#installation)
 - [Examples of uses](#examples-of-uses)
 - [Methods definition](#methods-definition)
-- [Licence MIT](#licence)
+- [MIT licence](#mit-licence)
 
 ## Prerequisites
 
@@ -185,7 +185,7 @@ public function prototype(string $name, callable $function): Prototype
 
 This function returns an instance of the current object.
 
-## Licence MIT
+## MIT licence
 
 Prototype
 
