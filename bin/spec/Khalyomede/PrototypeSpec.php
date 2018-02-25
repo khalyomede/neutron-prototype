@@ -1,8 +1,8 @@
 <?php
 
-namespace spec\Neutron;
+namespace spec\Khalyomede;
 
-use Neutron\Prototype;
+use Khalyomede\Prototype;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 use InvalidArgumentException;

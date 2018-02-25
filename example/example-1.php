@@ -1,7 +1,7 @@
 <?php
 	require( __DIR__ . '/../vendor/autoload.php' );
 
-	use Neutron\Prototype;
+	use Khalyomede\Prototype;
 
 	/**
 	 * This is an example class

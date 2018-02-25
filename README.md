@@ -1,4 +1,4 @@
-# Neutron\Prototype
+# Prototype
 
 Enable adding method to a class on the fly.
 
@@ -182,7 +182,7 @@ This function returns an instance of the current object.
 
 ## Licence MIT
 
-Neutron Prototype
+Prototype
 
 Copyright © 2018 Khalyomede
 

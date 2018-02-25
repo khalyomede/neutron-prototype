@@ -1,5 +1,5 @@
 {
-    "name": "neutron/prototype",
+    "name": "khalyomede/prototype",
     "description": "Enable adding method to a class on the fly",
     "type": "library",
     "license": "MIT",
@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Neutron\\": "src/"
+            "Khalyomede\\": "src/"
         }
     }
 }
