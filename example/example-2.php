@@ -27,15 +27,15 @@
 	 * ['php' => '7.2', 'python' => '3.6', 'nodejs' => '8.9']
 	 */
 
-	$tableau->prototype('find', function($name) {
-		return isset($this->items[$name]) ? $this->items[$name] : null;
+	$tableau->prototype('first', function() {
+		return $this->items[key($this->items)];
 	});
 
-	$php_found = $tableau->find('python');
+	$first_item = $tableau->first();
 
-	print_r($php_found);
+	print_r($first_item);
 
 	/**
-	 * '3.6'
+     * '7.2'
 	 */
 ?>
