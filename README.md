@@ -165,6 +165,17 @@ Register a new method for the object. This method can then be accessed across al
 public function prototype(string $name, callable $function): Prototype
 ```
 
+**Exceptions**
+
+`InvalidArgumentException`: 
+
+- If the name of the function is already used by the prototyped object
+- If the prototype has already been registered for this object
+
+`BadMethodCallException`:
+
+- If the method (you thought you prototyped) has not been registered yet
+
 **Note**
 
 This function returns an instance of the current object.
