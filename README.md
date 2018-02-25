@@ -1,5 +1,10 @@
 # Prototype
 
+![PHP from Packagist](https://img.shields.io/packagist/php-v/khalyomede/prototype.svg)
+![Packagist](https://img.shields.io/packagist/v/khalyomede/prototype.svg)
+![Packagist](https://img.shields.io/packagist/l/khalyomede/prototype.svg)
+
+
 Enable adding method to a class on the fly.
 
 ```php
