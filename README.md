@@ -2,6 +2,26 @@
 
 Enable adding method to a class on the fly.
 
+```php
+class Tableau extends Prototype {
+  public $items;
+
+  public function __construct($items = []) {
+    $this->items = $items;
+  }
+}
+```
+
+```php
+$tableau = new Tableau(['php', 'python', 'nodejs']);
+
+$tableau->prototype('all', function() {
+  return $this->items;
+});
+
+$languages = $tableau->all();
+```
+
 ## Summary
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
