@@ -26,6 +26,7 @@ $languages = $tableau->all();
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Examples of uses](#examples-of-uses)
+- [Methods definition](#methods-definition)
 - [Licence MIT](#licence)
 
 ## Prerequisites
@@ -49,9 +50,9 @@ composer require neutron/prototype:1.*
 
 All these examples can be seen in `/example` folder.
 
-- [Example 1 : extending a class with a simple function](#example-1--extending-a-class-with-a-simple-function)
-- [Example 2 : extending a class with a simple method](#example-2--extending-a-class-with-a-simple-method)
-- [Example 3 : extending a class with a method with parameters](#example-3--extending-a-class-with-a-method-with-parameters)
+- [Example 1: extending a class with a simple function](#example-1-extending-a-class-with-a-simple-function)
+- [Example 2: extending a class with a simple method](#example-2-extending-a-class-with-a-simple-method)
+- [Example 3: extending a class with a method with parameters](#example-3-extending-a-class-with-a-method-with-parameters)
 
 For all these examples, we will assume we have a function called `Tableau` that simulate the behavior of PHP collections:
 
@@ -73,12 +74,12 @@ class Tableau extends Prototype {
 }
 ```
 
-### Example 1 : extending a class with a simple function
+### Example 1: extending a class with a simple function
 
 ```php
 use Me\Tableau;
 
-$languages = ['php' => '7.2', 'python' => '3.6', 'nodejs' => '8.6']
+$languages = ['php' => '7.2', 'python' => '3.6', 'nodejs' => '8.6'];
 
 $tableau = new Tableau($languages);
 
@@ -93,6 +94,54 @@ Will display:
 
 ```bash
 Tableau
+```
+
+### Example 2: extending a class with a simple method
+
+```php
+use Me\Tableau;
+
+$languages = ['php' => '7.2', 'python' => '3.6', 'nodejs' => '8.6'];
+
+$tableau = new Tableau($languages);
+
+$tableau->prototype('first', function() {
+	return $this->items[key($this->items)];
+});
+
+$version = $tableau->first();
+
+echo $version;
+```
+
+Will print:
+
+```bash
+7.2
+```
+
+### Example 3: extending a class with a method with parameters
+
+```php
+use Me\Tableau;
+
+$languages = ['php' => '7.2', 'python' => '3.6', 'nodejs' => '8.6'];
+
+$tableau = new Tableau($languages);
+
+$tableau->prototype('find', function($key) {
+	return isset($this->items[$key]) ? $this->items[$key] : null;
+});
+
+$python_version = $tableau->find('python');
+
+echo $python_version;
+```
+
+Will echo:
+
+```bash
+3.6
 ```
 
 ## Licence MIT
