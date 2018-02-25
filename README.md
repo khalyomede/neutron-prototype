@@ -7,7 +7,7 @@ class Tableau extends Prototype {
   public $items;
 
   public function __construct($items = []) {
-  $this->items = $items;
+    $this->items = $items;
   }
 }
 ```
@@ -65,11 +65,11 @@ class Tableau extends Prototype {
   public $items
 
   public function __construct($items = []) {
-  $this->items = $items;
+    $this->items = $items;
   }
 
   public function all() {
-  return $this->items;
+    return $this->items;
   }
 }
 ```
