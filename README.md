@@ -48,7 +48,7 @@ This project is bounded to the following requirements you should be aware of:
 
 On your project folder, open a command prompt and type: 
 ```bash
-composer require neutron/prototype:1.*
+composer require khalyomede/prototype:1.*
 ```
 
 ## Examples of uses
