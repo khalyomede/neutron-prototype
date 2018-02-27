@@ -1,6 +1,12 @@
 {
     "name": "khalyomede/prototype",
     "description": "Enable adding method to a class on the fly",
+    "authors": [
+        {
+            "name": "Khalyomede",
+            "email": "khalyomede@gmail.com"
+        }
+    ],
     "type": "library",
     "license": "MIT",
     "minimum-stability": "stable",
