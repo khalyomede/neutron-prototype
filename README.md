@@ -38,7 +38,6 @@ $languages = $tableau->all();
 
 This project is bounded to the following requirements you should be aware of:
 - PHP >= 7.0.0
-- Each class extending `Prototype` should not define the `__call` method
 - Each class extending `Prototype` should not define the following method: `prototype()`
 - Each class extending `Prototype` should not define the following static method: `prototypes()`
 - Each properties you want your end developper to access via prototyping should be declared as `public` (and not `protected`)
