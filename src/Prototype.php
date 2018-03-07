@@ -59,7 +59,7 @@
 		 */
 		public function __call($method, $arguments) {
 			if( isset(static::$prototypes[$method]) === true ) {
-				return call_user_func_array(static::$prototypes[$method]->bindTo($this, new $this), $arguments);	
+				return call_user_func_array(static::$prototypes[$method]->bindTo($this, $this), $arguments);	
 			}
 			else {
 				return parent::call($method, $arguments);
