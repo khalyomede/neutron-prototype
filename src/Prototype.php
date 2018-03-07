@@ -62,7 +62,7 @@
 				throw new BadMethodCallException(sprintf('Prototype:: : method "%s" has not been registered yet', $method));
 			}
 
-			return call_user_func_array(static::$prototypes[$method]->bindTo($this), $arguments);
+			return call_user_func_array(static::$prototypes[$method]->bindTo($this, new $this), $arguments);
 		}
 	}
 ?>
