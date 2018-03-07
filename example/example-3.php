@@ -7,7 +7,7 @@
 	 * This is an example class
 	 */
 	class Tableau extends Prototype {
-		public $items;
+		protected $items;
 
 		public function __construct($items = []) {
 			$this->items = $items;

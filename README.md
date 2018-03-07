@@ -9,7 +9,7 @@ Enable adding method to a class on the fly.
 
 ```php
 class Tableau extends Prototype {
-  public $items;
+  protected $items;
 
   public function __construct($items = []) {
     $this->items = $items;
@@ -40,8 +40,6 @@ This project is bounded to the following requirements you should be aware of:
 - PHP >= 7.0.0
 - Each class extending `Prototype` should not define the following method: `prototype()`
 - Each class extending `Prototype` should not define the following static method: `prototypes()`
-- Each properties you want your end developper to access via prototyping should be declared as `public` (and not `protected`)
-- Each methods you want your end developper to access via prototyping should be declared as `public` (and note `private`)
 
 ## Installation
 
@@ -66,7 +64,7 @@ namespace Me;
 use Neutron\Prototype;
 
 class Tableau extends Prototype {
-  public $items
+  protected $items;
 
   public function __construct($items = []) {
     $this->items = $items;
