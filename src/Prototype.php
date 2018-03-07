@@ -58,11 +58,12 @@
 		 * @param array $arguments
 		 */
 		public function __call($method, $arguments) {
-			if( ! isset(static::$prototypes[$method]) ) {
-				throw new BadMethodCallException(sprintf('Prototype:: : method "%s" has not been registered yet', $method));
+			if( isset(static::$prototypes[$method]) === true ) {
+				return call_user_func_array(static::$prototypes[$method]->bindTo($this, new $this), $arguments);	
 			}
-
-			return call_user_func_array(static::$prototypes[$method]->bindTo($this, new $this), $arguments);
+			else {
+				return parent::call($method, $arguments);
+			}			
 		}
 	}
 ?>
