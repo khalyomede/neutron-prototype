@@ -30,8 +30,4 @@ class PrototypeSpec extends ObjectBehavior
     		return 'bar';
     	}]);
     }
-
-    function it_should_prevent_calling_unregistered_prototypes() {
-    	$this->shouldThrow('BadMethodCallException')->during('bar');
-    }
 }
