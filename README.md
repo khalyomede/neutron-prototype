@@ -61,7 +61,7 @@ For all these examples, we will assume we have a function called `Tableau` that 
 ```php
 namespace Me;
 
-use Neutron\Prototype;
+use Khalyomede\Prototype;
 
 class Tableau extends Prototype {
   protected $items;
